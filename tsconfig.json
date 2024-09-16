@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    /* Modules */
+    "module": "commonjs",                                /* Specify what module code is generated for Node.js */
+    "rootDir": "./src",                                  /* Specify the root folder containing TypeScript source files. */
+    "outDir": "./dist",                                  /* Specify an output folder for all compiled JavaScript files. */
+    
+    /* Emit Options */
+    "sourceMap": true,                                   /* Generate .map files for easier debugging in dev tools. */
+    "removeComments": true,                              /* Remove comments in the emitted JavaScript files. */
+    "noEmitOnError": true,                               /* Disable emitting files if any type checking errors occur. */
+    
+    /* Interop Constraints */
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. */
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+    
+    /* Type Checking */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    "skipLibCheck": true,                                /* Skip type checking all .d.ts files. */
+    
+    /* Experimental Options */
+    "resolveJsonModule": true,                           /* Enable importing .json files as modules. */
+    "experimentalDecorators": true,                      /* Enable support for experimental decorators. */
+    "emitDecoratorMetadata": true,                       /* Emit metadata for decorated classes. */
+  },
+  "include": [
+    "src/**/*.ts"                                        /* Include all TypeScript files in the src folder and subfolders. */
+  ],
+  "exclude": [
+    "node_modules",                                      /* Exclude node_modules to avoid unnecessary compilation. */
+    "dist"                                               /* Exclude the output folder from being included in the build. */
+  ]
+}

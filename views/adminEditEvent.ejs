@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Event</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white shadow-md">
+    <div class="container mx-auto p-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Admin Dashboard</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li>
+            <a href="/admin/dashboard" class="hover:underline">Dashboard</a>
+          </li>
+          <li>
+            <a href="/admin/logout" class="hover:underline">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Edit Event Form -->
+  <main class="flex-grow container mx-auto py-8">
+    <h2 class="text-2xl font-semibold mb-6">Edit Event</h2>
+    <form action="/admin/edit-event" method="POST" class="bg-white p-6 rounded-lg shadow-md">
+      <!-- Event ID (Hidden) -->
+      <input type="hidden" id="eventId" name="eventId" value="<%= event.id %>">
+
+      <!-- Event Name -->
+      <div class="mb-4">
+        <label for="eventName" class="block text-gray-700 text-sm font-bold mb-2">Event Name:</label>
+        <input type="text" id="eventName" name="eventName" value="<%= event.name %>" required
+               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Event Date -->
+      <div class="mb-4">
+        <label for="eventDate" class="block text-gray-700 text-sm font-bold mb-2">Event Date:</label>
+        <input type="date" id="eventDate" name="eventDate" value="<%= event.date.toISOString().split('T')[0] %>" required
+               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Event Description -->
+      <div class="mb-4">
+        <label for="eventDescription" class="block text-gray-700 text-sm font-bold mb-2">Event Description:</label>
+        <textarea id="eventDescription" name="eventDescription" rows="5" required
+                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-400"><%= event.description %></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="flex items-center justify-between">
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          Save Changes
+        </button>
+        </form>
+      </div>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-4">
+    <p>&copy; 2024 Admin Dashboard. All rights reserved.</p>
+  </footer>
+</body>
+</html>
