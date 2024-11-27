@@ -15,7 +15,7 @@ A TypeScript-based web application for managing college events. This project inc
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/your-username/typescript-event-management.git
+   git clone https://github.com/vishdev-git/typescript-event-management.git
    cd typescript-event-management
    ```
 

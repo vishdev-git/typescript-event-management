@@ -21,8 +21,7 @@ export class AdminController {
           maxAge: 3600000,
         }); // 1 hour expiry
 
-        // Log session creation
-        console.log(`Admin logged in: ${request.email}, Token: ${token}`);
+  
 
         // Redirect to dashboard
         res.redirect("/admin/dashboard");
