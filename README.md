@@ -21,7 +21,7 @@ A TypeScript-based web application for managing college events. This project inc
 
 2. **Install Dependencies**
 
-   Ensure you have Node.js and npm installed. Then run:
+   Ensure you have Node.js 20.0 or above installed and npm installed. Then run:
 
    ```bash
    npm install
